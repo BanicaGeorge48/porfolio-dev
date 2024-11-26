@@ -1,17 +1,22 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro';
-import SocialPill from '../components/icons/SocialPill.astro';
-import LinkedInIcon from '../components/icons/LinkedIn.astro';
-import GitHubIcon from '../components/icons/GitHub.astro';
+import Layout from '../layouts/Layout.astro'
+import Badge from '../components/Badge.astro'
+import SocialPill from '../components/icons/SocialPill.astro'
+import LinkedInIcon from '../components/icons/LinkedIn.astro'
+import GitHubIcon from '../components/icons/GitHub.astro'
+import MailIcon from '../components/icons/Mail.astro'
+import SectionContainer from "../components/SectionContainer.astro"
 ---
 
-<Layout title="George Porfolio">
+<Layout 
+	title='Porfolio de George - Desarrollador y Programador Web'
+	description='Contrata a George para crear tu aplicacion web o movil. Desarrollador web Junior.'
+>
 	<main>
 
-		<section class="w-full mx-auto lg:w-[740px] py-44">
+		<SectionContainer class="w-full mx-auto lg:w-[740px] py-44">
 			<img 
-			class="rounded-full w-12 h-12"
+			class="rounded-full size-6"
 			src="/perfil_pequeño.jpeg" 
 			alt="george photo"
 			/>
@@ -26,23 +31,30 @@ import GitHubIcon from '../components/icons/GitHub.astro';
 				</a>
 			</h1>
 			<h2 class="text-2xl opacity-80 text-wrap">
-				<span class="text-red-200/90">Desarrollador Web Junior</span>
+				<span class="text-red-300/90">Desarrollador Web Junior</span>
 				pero con muchas ganas de trabajar y aprender.
 	
 			</h2>
 
-			<nav class="flex gap-x-2">
+			<nav class="flex gap-x-2 mt-8">
 				<SocialPill href="https://www.linkedin.com/in/george-banica/">
-					<LinkedInIcon class="w-6 h-6" />
+					<LinkedInIcon class="size-6" />
 					LinkedIn 
 				</SocialPill>
 				<SocialPill href="https://github.com/BanicaGeorge48">
-					<GitHubIcon class="w-6 h-6" />
+					<GitHubIcon class="size-6" />
 					GitHub
+				</SocialPill>
+				<SocialPill href="https://mail.google.com/mail/u/2/?ogbl#inbox?compose=new">
+					<MailIcon class="size-6" />
+					banicageorge48@gmail.com
 				</SocialPill>
 
 			</nav>
-		</section>
+		</SectionContainer>
+		<SectionContainer id="experiencia">
+
+		</SectionContainer>
 	</main>
 </Layout>
 
