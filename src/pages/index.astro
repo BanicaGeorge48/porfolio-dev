@@ -1,61 +1,51 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import Badge from '../components/Badge.astro'
-import SocialPill from '../components/icons/SocialPill.astro'
-import LinkedInIcon from '../components/icons/LinkedIn.astro'
-import GitHubIcon from '../components/icons/GitHub.astro'
-import MailIcon from '../components/icons/Mail.astro'
+import Layout from "../layouts/Layout.astro"
+
+import AboutMe from "../components/AboutMe.astro"
+import Briefcase from "../components/icons/Briefcase.astro"
+import CodeIcon from "../components/icons/Code.astro"
+import Experience from "../components/Experience.astro"
+import ProfileCheck from "../components/icons/ProfileCheck.astro"
+import Projects from "../components/Projects.astro"
 import SectionContainer from "../components/SectionContainer.astro"
+import Hero from "../components/Hero.astro"
+import TitleSection from "../components/TitleSection.astro"
 ---
 
-<Layout 
-	title='Porfolio de George - Desarrollador y Programador Web'
-	description='Contrata a George para crear tu aplicacion web o movil. Desarrollador web Junior.'
+<Layout
+  title="Porfolio de midudev - Desarrollador y Programador Web con 15 años de experiencia"
+  description="Contrata a midudev para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas."
 >
-	<main>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+      </slot>
+    </Hero>
+    </SectionContainer>
+    <div class="space-y-24">
+    <SectionContainer id="experiencia">
+      <TitleSection>
+        <Briefcase class="size-8" />
+        Experiencia laboral
+      </TitleSection>
+      <Experience />
+    </SectionContainer>
 
-		<SectionContainer class="w-full mx-auto lg:w-[740px] py-44">
-			<img 
-			class="rounded-full size-6"
-			src="/perfil_pequeño.jpeg" 
-			alt="george photo"
-			/>
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
-				Hey, soy George 
-				<a 
-				href="https://www.linkedin.com/in/george-banica/"
-				target="_blank"
-				rel="noopener"
-				class="flex justify-center items-center">
-					<Badge>Disponible para trabajar</Badge>
-				</a>
-			</h1>
-			<h2 class="text-2xl opacity-80 text-wrap">
-				<span class="text-red-300/90">Desarrollador Web Junior</span>
-				pero con muchas ganas de trabajar y aprender.
-	
-			</h2>
+    <SectionContainer id="proyectos">
+      <TitleSection>
+        <CodeIcon class="size-7" />
+        Proyectos
+      </TitleSection>
+      <Projects />
+    </SectionContainer>
 
-			<nav class="flex gap-x-2 mt-8">
-				<SocialPill href="https://www.linkedin.com/in/george-banica/">
-					<LinkedInIcon class="size-6" />
-					LinkedIn 
-				</SocialPill>
-				<SocialPill href="https://github.com/BanicaGeorge48">
-					<GitHubIcon class="size-6" />
-					GitHub
-				</SocialPill>
-				<SocialPill href="https://mail.google.com/mail/u/2/?ogbl#inbox?compose=new">
-					<MailIcon class="size-6" />
-					banicageorge48@gmail.com
-				</SocialPill>
-
-			</nav>
-		</SectionContainer>
-		<SectionContainer id="experiencia">
-
-		</SectionContainer>
-	</main>
+    <SectionContainer id="sobre-mi">
+      <TitleSection>
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </TitleSection>
+      <AboutMe />
+    </SectionContainer>
+  </div>
+  </main>
 </Layout>
-
-
