@@ -1,51 +1,75 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from '../layouts/Layout.astro'
 
-import AboutMe from "../components/AboutMe.astro"
-import Briefcase from "../components/icons/Briefcase.astro"
-import CodeIcon from "../components/icons/Code.astro"
-import Experience from "../components/Experience.astro"
-import ProfileCheck from "../components/icons/ProfileCheck.astro"
-import Projects from "../components/Projects.astro"
+import Badge from '../components/Badge.astro'
+import SocialPill from '../components/icons/SocialPill.astro'
+import LinkedInIcon from '../components/icons/LinkedIn.astro'
+import GitHubIcon from '../components/icons/GitHub.astro'
+import MailIcon from '../components/icons/Mail.astro'
 import SectionContainer from "../components/SectionContainer.astro"
-import Hero from "../components/Hero.astro"
-import TitleSection from "../components/TitleSection.astro"
+import BriefcaseIcon from '../components/icons/Briefcase.astro'
+import CodeIcon from '../components/icons/Code.astro'
+import Projects from '../components/Projects.astro'
 ---
 
-<Layout
-  title="Porfolio de midudev - Desarrollador y Programador Web con 15 años de experiencia"
-  description="Contrata a midudev para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas."
+<Layout 
+	title='Porfolio de George - Desarrollador y Programador Web'
+	description='Contrata a George para crear tu aplicacion web o movil. Desarrollador web Junior.'
 >
-  <main class="px-4">
-    <SectionContainer class="py-16 md:py-36">
-      <Hero>
-      </slot>
-    </Hero>
-    </SectionContainer>
-    <div class="space-y-24">
-    <SectionContainer id="experiencia">
-      <TitleSection>
-        <Briefcase class="size-8" />
-        Experiencia laboral
-      </TitleSection>
-      <Experience />
-    </SectionContainer>
+	<main class="px-4">
 
-    <SectionContainer id="proyectos">
-      <TitleSection>
-        <CodeIcon class="size-7" />
-        Proyectos
-      </TitleSection>
-      <Projects />
-    </SectionContainer>
+		<SectionContainer class="w-full mx-auto lg:w-[740px] py-44">
+			<img 
+			class="rounded-full size-6"
+			src="/perfil_pequeño.jpeg" 
+			alt="george photo"
+			/>
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+				Hey, soy George 
+				<a 
+				href="https://www.linkedin.com/in/george-banica/"
+				target="_blank"
+				rel="noopener"
+				class="flex justify-center items-center">
+					<Badge>Disponible para trabajar</Badge>
+				</a>
+			</h1>
+			<h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
+				<span class="text-orange-400">Desarrollador Web Junior</span>
+				pero con muchas ganas de trabajar y aprender.
+	
+			</h2>
 
-    <SectionContainer id="sobre-mi">
-      <TitleSection>
-        <ProfileCheck class="size-8" />
-        Sobre mí
-      </TitleSection>
-      <AboutMe />
-    </SectionContainer>
-  </div>
-  </main>
+			<nav class="flex gap-4 mt-8 flex-wrap">
+				<SocialPill href="https://www.linkedin.com/in/george-banica/">
+					<LinkedInIcon class="size-4 md:size-6" />
+					LinkedIn 
+				</SocialPill>
+				<SocialPill href="https://github.com/BanicaGeorge48">
+					<GitHubIcon class="size-4 md:size-6" />
+					GitHub
+				</SocialPill>
+				<SocialPill href="https://mail.google.com/mail/u/2/?ogbl#inbox?compose=new">
+					<MailIcon class="size-4 md:size-6" />
+					banicageorge48@gmail.com
+				</SocialPill>
+
+			</nav>
+		</SectionContainer>
+		<SectionContainer id="experiencia">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<BriefcaseIcon class="size-7"/>
+				Experiencia laboral
+			</h2>
+		</SectionContainer>
+		<SectionContainer id="proyectos">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<CodeIcon class="size-7"/>
+				Proyectos
+			</h2>
+		<Projects />
+		</SectionContainer>
+	</main>
 </Layout>
+
+
